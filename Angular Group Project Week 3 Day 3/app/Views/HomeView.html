@@ -1,0 +1,23 @@
+﻿<div class="form-inline">
+    <input class="form-control" type="text" placeholder="Title" ng-model="inputTitle" />
+    <input class="form-control" type="text" placeholder="Author Name" ng-model="inputAuthor" /> 
+    <button class="btn btn-success" ng-click="addPost();">ADD</button><br />
+    <textarea class="form-control" placeholder="Write Your Post Here" ng-model="inputBody" rows="7" cols="60"></textarea>
+    
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Post</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="post in posts">
+            <td>{{post.title}}</td>
+            <td>{{post.author}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </tbody>
+</table>
